@@ -1,0 +1,42 @@
+server:
+  port: 9002
+
+#spring:
+#  application:
+#    name: myshop-web
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka/
+  instance:
+    prefer-ip-address: true
+
+myshop-user:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+
+feign:
+  hystrix:
+    enabled: true
+
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:7779
+  application:
+    name: myshop-web
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  # 暴露所有端点，方便调试
+  endpoint:
+    health:
+      show-details: always
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
