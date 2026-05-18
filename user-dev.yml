@@ -9,6 +9,7 @@ spring:
     url: jdbc:mysql://localhost:3306/springcloud?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: a29180506
+    driver-class-name: com.mysql.cj.jdbc.Driver
   # JPA 配置
   jpa:
     show-sql: true
