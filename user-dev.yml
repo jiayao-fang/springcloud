@@ -6,9 +6,9 @@ spring:
     name: myshop-user
   # 数据源配置
   datasource:
-    url: jdbc:mysql://localhost:3307/springcloud?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://localhost:3307/springcloud?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
     username: root
-    password: a29180506
+    password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
   # JPA 配置
   jpa:
